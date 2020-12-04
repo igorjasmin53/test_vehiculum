@@ -3,7 +3,7 @@
         :style="style"
     >
         <li>
-            <span>
+            <span class="text-uppercase">
                 {{ popularity.label }}
             </span>
         </li>
@@ -20,16 +20,19 @@
     },
     computed: {
       popularity() {
-        return this.likes > 100 ? {
-          label: 'EPIC',
+        return this.dislikes > this.likes ? {
+          label: 'chestnut',
+          color: '#000000'
+        } : (this.likes > 100 ? {
+          label: 'hall of fame',
           color: '#f33636'
         } : (this.likes > 50 ? {
-          label: 'TRENDING',
+          label: 'trending',
           color: '#f3a536'
         } : {
-          label: 'POPULAR',
+          label: 'new in town',
           color: '#36aef3'
-        })
+        }))
       },
       style() {
         return {
