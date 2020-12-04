@@ -1,0 +1,41 @@
+#bible-page {
+  padding-top: 61px;
+
+  .content {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-column-gap: 20px;
+      grid-row-gap: 16px;
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    hr {
+      margin-top: 41px;
+      margin-bottom: 0;
+      border-bottom: 0;
+      border-color: $white-three;
+    }
+
+    .cards {
+      margin-top: 17px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-column-gap: 15px;
+      grid-row-gap: 38px;
+      margin-bottom: 64px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
+}

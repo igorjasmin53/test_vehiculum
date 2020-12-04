@@ -1,0 +1,20 @@
+.account-popup {
+  a {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: $gray;
+    text-decoration: none;
+    margin-left: 0.5rem;
+  }
+
+  hr {
+    color: $gray-four;
+    border-bottom: 0;
+  }
+
+  .publish {
+    color: $chocolate;
+    font-weight: bold;
+  }
+}

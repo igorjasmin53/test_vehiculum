@@ -1,0 +1,32 @@
+.stats {
+  margin: 1rem;
+
+  .hand-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $lightish-red;
+    &:hover {
+      cursor: pointer;
+      background-color: $faded-red;
+    }
+  }
+  .count {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: $lightish-red;
+  }
+  &.like {
+    .hand-container {
+      background-color: $tea;
+      &:hover {
+        background-color: $light-forest-green;
+      }
+    }
+    .count {
+      color: $tea;
+    }
+  }
+}

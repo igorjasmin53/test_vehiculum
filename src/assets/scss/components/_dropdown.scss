@@ -1,0 +1,30 @@
+.dropdown {
+  &-menu {
+    border-radius: 0.5rem;
+    box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.15);
+    border: solid 1px #d7d7d7;
+    background-color: $white-two;
+    display: none;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    z-index: 1;
+    &[data-show] {
+      display: block;
+    }
+
+    div[data-popper-arrow],
+    div[data-popper-arrow]::before {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      z-index: -1;
+      top: -2px;
+    }
+
+    div[data-popper-arrow]::before {
+      content: '';
+      transform: rotate(45deg);
+      background: $white-two;
+    }
+  }
+}

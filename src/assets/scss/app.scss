@@ -1,0 +1,143 @@
+@import "fonts";
+@import "variables";
+@import "components";
+@import "pages";
+
+$hamburger-layer-color: $white;
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+
+body {
+  background-color: $white;
+  margin: 0;
+
+  #app {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+
+    .top-nav {
+      background-color: $black;
+      &__inner {
+        height: $top-nav-height;
+        max-width: $layout-max-width;
+
+        @media (max-width: 1140px) {
+          .logo {
+            margin-left: 1rem;
+          }
+        }
+        .hamburger {
+          outline: none;
+
+          display: none;
+          @media (max-width: 1140px) {
+            display: block;
+          }
+        }
+        .hamburger.is-active + .top-nav__inner-controls {
+          opacity: 1;
+          pointer-events: all;
+        }
+        &-controls {
+          display: flex;
+          @media (max-width: 1140px) {
+            flex-direction: column;
+            position: absolute;
+            top: $top-nav-height;
+            opacity: 0;
+            pointer-events: none;
+            width: 100%;
+            transition: all 0.3s;
+            z-index: 1;
+          }
+
+          .item {
+            font-size: 15px;
+            font-weight: 600;
+            color: $white-two;
+            padding: 0 32px;
+            display:flex;
+            align-items: center;
+            &:hover {
+              background-color: $chocolate;
+              cursor: pointer;
+            }
+            @media (max-width: 1140px) {
+              background-color: $black;
+              height: $top-nav-height;
+            }
+          }
+        }
+      }
+    }
+
+    .banner {
+      background-image: url('../image/banner.png');
+      background-position: center;
+      background-size: cover;
+      box-sizing: border-box;
+      height: 320px;
+      padding: 56px 0;
+      @media (max-width: 576px) {
+        padding: 0;
+      }
+
+      .title {
+        color: $chocolate;
+        font-size: 48px;
+        line-height: 72px;
+        max-width: $layout-max-width;
+        text-align: center;
+      }
+
+      .sub-title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $white-two;
+        max-width: $layout-max-width;
+        text-align: center;
+      }
+    }
+
+    .content {
+      max-width: $layout-max-width;
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    .footer-banner {
+      background-image: url('../image/footer.png');
+      background-position: center;
+      background-size: cover;
+      height: 194px;
+      margin-top: 58px;
+
+      .content {
+        padding: 60px  15px;
+        @media (max-width: 1140px) {
+          padding: 60px;
+        }
+
+        .slogan {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          color: $white-two;
+          width: 200px;
+        }
+
+        .submit-joke {
+          display: flex;
+          margin-top: 12px;
+          color: $chocolate;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

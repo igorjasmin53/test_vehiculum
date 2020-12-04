@@ -1,0 +1,9 @@
+.back-button {
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 22px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50% 100% 100% 50% / 50% 50% 100% 100%;
+  background: $black;
+}
